@@ -1,0 +1,68 @@
+<html>
+<html lang="en">
+<head><title>video</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="video.css">
+    <title>Video Gallery</title>
+    <link rel="stylesheet" type="text/css" href="video.css">
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+    <center>
+    <h1>Videos of The Space Of Love</h1>
+
+    <p>click full screen to watch</p>
+
+    <br>
+
+    <div class="topnav-centered">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="time slots.html">Open Time</a>
+        <a href="zone 1.html">Area Zone</a>
+        <a href="video.html">Video</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="form.html">Form for visit</a>
+      </div>
+   
+    
+    <div class="container">
+        <div class="videos">
+            <video class="active" src="EarthMix.mp4" muted></video>
+            <video src="EarthMix 2.mp4" muted></video>
+            <video src="EarthMix 3.mp4" muted></video>
+            <video src="EarthMix 4.mp4" muted></video>
+        </div>
+        <div class="main-video">
+            <video src="EarthMix.mp4" muted controls autoplay></video>
+        </div>
+    </div>
+
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('.videos video').click(function(){
+
+                $(this).addClass('active').siblings().removeClass('active');
+
+                var src = $(this).attr('src');
+                $('.main-video video').attr('src',src);
+            });
+        });
+
+    </script>
+
+
+
+</body>
+</html>
